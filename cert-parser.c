@@ -508,10 +508,10 @@ const SSL_METHOD *ts_tls_get_method(int index)
   switch (index) {
 #if OPENSSL_VERSION_NUMBER < 0x10100000L
     case 0:
-      return SSLv2_client_method();
+      return "null";
 #endif
   case 1:
-    return SSLv3_client_method();
+    return "null";
   case 2:
     return TLSv1_client_method();
   case 3:
